@@ -3,103 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="styles/style.css">
     <title>The Wayfarers' Guild</title>
 </head>
 <body>
+    <div class="page-scaler">
 
-    <!-- Фиксированная шапка сайта -->
-    <div class="header">
-        
-        <!-- Логотип слева -->
-        <div class="logo-slot">
-            <img src="assets/logo.svg" alt="Лого">
+        <!-- Фиксированная шапка сайта -->
+        <div class="header">
+            
+            <!-- Логотип слева -->
+            <div class="logo-slot">
+                <img src="assets/logo.svg" alt="Лого">
+            </div>
+
+            
+            <div class="nav-menu">
+                
+                <!-- Кнопка: Главная -->
+                <div class="nav-button">
+                    <img src="assets/home-button.svg" alt="Главная">
+                </div>
+                    
+                
+
+                <!-- Кнопка: Кодекс -->
+                <div class="nav-button">
+                    <img src="assets/code-button.svg" alt="Кодекс">
+                </div>
+
+                <!-- Кнопка: Контракты -->
+                <div class="nav-button">
+                    <img src="assets/contracts-button.svg" alt="Контракты">
+                </div>
+
+                <!-- Кнопка: Награды -->
+                <div class="nav-button">
+                    <img src="assets/awards-button.svg" alt="Награды">
+                </div>
+
+                <!-- Кнопка: О нас -->
+                <div class="nav-button">
+                    <img src="assets/about-us-button.svg" alt="О нас">
+                </div>
+
+            </div>
         </div>
 
+        <!-- Контентная часть -->
+        <div class="main-content">
+            
         
-        <div class="nav-menu">
-            
-            <!-- Кнопка: Главная -->
-            <div class="nav-button">
-                <img src="assets/home-button.svg" alt="Главная">
+            <div class="bg-road-slot">
+                <img src="assets/road.svg" alt="Дорога">
             </div>
+        
+            <!-- Компас 1 -->
+            <div class="compass-slot compass-1">
+                <img src="assets/compass.svg" alt="Компас-1">
+
+            </div>
+
+            <!-- Компас 2 -->
+            
+            <div class="compass-slot compass-2">
+                <img src="assets/compass.svg" alt="Компас-2">
+
+            </div> 
+            
+            <div class="stars">
+                <img src="assets/stars.svg" alt="Звёзды">
+            </div>
+
+            <div class="content-wrapper">
+
+            
+                <div class="text-block">
+                    <h1 class="main-title">ШИРЕШАГ</h1>
+                    <p class="subtitle">Добро пожаловать в гильдию путешественников!</p>
+                </div>
+
                 
-            
 
-            <!-- Кнопка: Кодекс -->
-            <div class="nav-button">
-                <img src="assets/code-button.svg" alt="Кодекс">
-            </div>
 
-            <!-- Кнопка: Контракты -->
-            <div class="nav-button">
-                <img src="assets/contracts-button.svg" alt="Контракты">
-            </div>
+                <div class="big-button-slot">
+                    <img src="assets/button.svg" alt="Кнопка">
+                </div>
+                    
 
-            <!-- Кнопка: Награды -->
-            <div class="nav-button">
-                <img src="assets/awards-button.svg" alt="Награды">
-            </div>
+                <div class="castle">
+                    <img src="assets/castle.svg" alt="Замок">
+                </div>
 
-            <!-- Кнопка: О нас -->
-            <div class="nav-button">
-                <img src="assets/about-us-button.svg" alt="О нас">
+
             </div>
+    
+        
 
         </div>
     </div>
 
-    <!-- Контентная часть -->
-    <div class="main-content">
-        
-    
-        <div class="bg-road-slot">
-            <img src="assets/road.svg" alt="Дорога">
-        </div>
-    
-        <!-- Компас 1 -->
-        <div class="compass-slot compass-1">
-            <img src="assets/compass.svg" alt="Компас-1">
-
-        </div>
-
-        <!-- Компас 2 -->
-        
-        <div class="compass-slot compass-2">
-            <img src="assets/compass.svg" alt="Компас-2">
-
-        </div> 
-        
-        <div class="stars">
-            <img src="assets/stars.svg" alt="Звёзды">
-        </div>
-
-        <div class="content-wrapper">
-
-        
-            <div class="text-block">
-                <h1 class="main-title">ШИРЕШАГ</h1>
-                <p class="subtitle">Добро пожаловать в гильдию путешественников!</p>
-            </div>
-
+    <script>
+        function autoscale() {
+            const baseWidth = 1920; 
+            const scaler = document.querySelector('.page-scaler');
+            const currentWidth = window.innerWidth;
             
+            
+            const scalePercent = currentWidth / baseWidth;
+            
+            
+            scaler.style.transform = `scale(${scalePercent})`;
+        }
 
-
-            <div class="big-button-slot">
-                <img src="assets/button.svg" alt="Кнопка">
-            </div>
-                
-
-            <div class="castle">
-                <img src="assets/castle.svg" alt="Замок">
-            </div>
-
-
-        </div>
-   
-    
-
-    </div>
+        
+        window.addEventListener('load', autoscale);
+        window.addEventListener('resize', autoscale);
+    </script>
 
 </body>
 </html>
